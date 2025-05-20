@@ -12,3 +12,21 @@
 - **Efficient Processing**: LangChain text chunking with context preservation  
 
 ## Project Structure  
+## Project Structure
+```
+├── data_prep.py              # Data processing & Pinecone upsert
+├── main.py                   # FastAPI server & core logic
+├── frontend.html             # Chat interface (HTML/JS)
+├── naval_data.json           # Processed transcripts
+├── .env.example              # Environment template
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+```
+```
+
+
+## Installation  
+1. **Clone Repository**  
+git clone https://github.com/yourusername/naval-rag-chatbot.git
+cd naval-rag-chatbot
+
