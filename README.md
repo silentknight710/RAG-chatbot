@@ -11,7 +11,6 @@
 - **Streamlined UI**: Web interface with source attribution  
 - **Efficient Processing**: LangChain text chunking with context preservation  
 
-## Project Structure  
 ## Project Structure
 ```
 ├── data_prep.py              # Data processing & Pinecone upsert
@@ -22,11 +21,12 @@
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 ```
-```
+
 
 
 ## Installation  
-1. **Clone Repository**  
+1. **Clone Repository**
+```
 git clone https://github.com/yourusername/naval-rag-chatbot.git
 cd naval-rag-chatbot
-
+```
