@@ -61,7 +61,7 @@ python main.py
 The API will be live at: http://127.0.0.1:8000
 
 **Web Chat UI:**
-Open http://127.0.0.1:8000/chat to open the chatbot and now the Naval Ravikant chatbot is live!
+Open http://127.0.0.1:8000/chat  in order to open the chatbot and now the Naval Ravikant chatbot is live!
 
 API Docs (Swagger UI):
 Visit http://127.0.0.1:8000/docs
