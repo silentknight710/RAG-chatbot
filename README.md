@@ -17,7 +17,7 @@
 ├── main.py                   # FastAPI server & core logic
 ├── frontend.html             # Chat interface (HTML/JS)
 ├── naval_data.json           # Processed transcripts
-├── .env.example              # Environment template
+├── .env                      # Environment template
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 ```
@@ -33,19 +33,19 @@ cd RAG-chatbot
 2. **Set Up Environment**
    ```
    python -m venv naval_rag_env
-   source naval_rag_env/bin/activate   # or .\naval_rag_env\Scripts\activate on Windows
+   
    ```
 3. **Set Up Environment**
    ```
    pip install -r requirements.txt
    ```
-4. **Set Up API Keys**
+4. **Set Up API Keys in .env**
    ```
    PINECONE_API_KEY=your_pinecone_api_key
    PINECONE_ENV=your_pinecone_environment
    GOOGLE_API_KEY=your_google_gemini_api_key
    ```
-Refer to ```.env.example``` for structure.
+Please refer to ```.env``` for structure.
 
 ## Index Data
 Run the following to process and upload Naval's transcript to Pinecone:
@@ -60,11 +60,13 @@ python main.py
 
 The API will be live at: http://127.0.0.1:8000
 
+**Web Chat UI:**
+Open http://127.0.0.1:8000/chat to open the chatbot and now the Naval Ravikant chatbot is live!
+
 API Docs (Swagger UI):
 Visit http://127.0.0.1:8000/docs
 
-**Web Chat UI:**
-Open http://127.0.0.1:8000/chat
+
 
 
 ## API Overview
