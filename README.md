@@ -27,13 +27,11 @@
 ## Installation  
 1. **Clone Repository**
 ```
-git clone https://github.com/yourusername/naval-rag-chatbot.git
-cd naval-rag-chatbot
+git clone https://github.com/silentknight710/RAG-chatbot
+cd RAG-chatbot
 ```
 2. **Set Up Environment**
    ```
-   git clone https://github.com/your-username/naval-rag-chatbot.git
-   cd naval-rag-chatbot
    python -m venv naval_rag_env
    source naval_rag_env/bin/activate   # or .\naval_rag_env\Scripts\activate on Windows
    ```
