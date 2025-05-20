@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naval RAG Chatbot</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 700px; margin: auto; }
+    textarea, input, button { width: 100%; margin-top: 1rem; padding: 0.75rem; font-size: 1rem; }
+    .response-box { background: #f0f0f0; padding: 1rem; margin-top: 1rem; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>💬 Ask Naval Ravikant</h1>
+  <textarea id="question" rows="3" placeholder="Ask a question..."></textarea>
+  <button onclick="askQuestion()">Ask</button>
+
+  <div class="response-box" id="response" style="display:none;">
+    <h3>Answer:</h3>
+    <p id="answer"></p>
+    <h4>Sources:</h4>
+    <ul id="sources"></ul>
+  </div>
+
+  <script>
+    async function askQuestion() {
+      const question = document.getElementById('question').value;
+      const responseBox = document.getElementById('response');
+      const answerEl = document.getElementById('answer');
+      const sourcesEl = document.getElementById('sources');
+
+      const res = await fetch("http://127.0.0.1:8000/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: question })
+      });
+
+      const data = await res.json();
+      answerEl.innerText = data.answer;
+      sourcesEl.innerHTML = data.sources.map(s => `<li>${s.text} (score: ${s.score.toFixed(2)})</li>`).join('');
+      responseBox.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
