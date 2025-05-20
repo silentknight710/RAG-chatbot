@@ -12,9 +12,9 @@ import requests
 load_dotenv(dotenv_path='.env', encoding='utf-8')
 
 # Hardcoded API Keys (as requested)
-PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-PINECONE_ENV = os.getenv('PINECONE_ENV')
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+PINECONE_API_KEY ='your PINECONE_API_KEY'
+PINECONE_ENV = 'your PINECONE_ENV'
+GOOGLE_API_KEY = 'your GOOGLE_API_KEY'
 
 
 # Initialize embedding model
