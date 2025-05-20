@@ -65,7 +65,7 @@ The API will be live at: http://127.0.0.1:8000
 API Docs (Swagger UI):
 Visit http://127.0.0.1:8000/docs
 
-** Web Chat UI: **
+**Web Chat UI:**
 Open http://127.0.0.1:8000/chat
 
 
@@ -90,3 +90,29 @@ Response:
   ]
 }
 ```
+## Tech Stack
+
+| Layer      | Tech Used                                 |
+| ---------- | ----------------------------------------- |
+| Backend    | FastAPI                                   |
+| Embeddings | SentenceTransformers (`all-MiniLM-L6-v2`) |
+| Vector DB  | Pinecone                                  |
+| LLM        | Google Gemini API                         |
+| UI         | HTML + JS (served via FastAPI)            |
+| Chunking   | LangChain RecursiveCharacterTextSplitter  |
+
+## Example Prompts
+"How can I become wealthy?"
+
+"What does Naval think about finding meaning in life?"
+
+"What is the difference between happiness and pleasure according to Naval?"
+
+## Future Improvements
+Add chat history and memory
+
+Stream LLM responses
+
+Improve UI with Tailwind or React
+
+Add error handling and rate limits
